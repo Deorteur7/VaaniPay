@@ -1,0 +1,26 @@
+{
+  "id": "INV-20260821-O9KW",
+  "date": "2026-08-21T17:03:50.019Z",
+  "shopName": "Dubai shop",
+  "merchantUpiId": "jsriniketh777@okaxis",
+  "items": [
+    {
+      "name": "Rice",
+      "quantity": 2,
+      "unit": "kg",
+      "pricePerUnit": 65,
+      "total": 130
+    },
+    {
+      "name": "Oil",
+      "quantity": 1,
+      "unit": "bottle",
+      "pricePerUnit": 150,
+      "total": 150
+    }
+  ],
+  "subtotal": 280,
+  "status": "paid",
+  "paymentTime": "2026-08-21T17:06:41.881Z",
+  "transcript": "Rice two kilos one hundred thirty rupees, oil one hundred fifty."
+}

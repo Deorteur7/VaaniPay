@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overscroll-behavior: none;
+    background-color: #F5F6FA;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0.5rem);
+  }
+
+  /* Paytm-style blue gradient */
+  .paytm-header {
+    background: linear-gradient(135deg, #00BAF2 0%, #0066CC 100%);
+  }
+
+  /* Paytm card shadow */
+  .paytm-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Paytm primary button */
+  .paytm-btn {
+    background: linear-gradient(135deg, #00BAF2 0%, #0088CC 100%);
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  .paytm-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+  }
+
+  /* Bottom nav active indicator */
+  .nav-active {
+    color: #00BAF2;
+    position: relative;
+  }
+
+  .nav-active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #00BAF2;
+  }
+
+  /* Chat bubble animations */
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .chat-bubble {
+    animation: slideUp 0.2s ease-out;
+  }
+
+  /* Pulse for recording */
+  @keyframes recordPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+    50%       { box-shadow: 0 0 0 16px rgba(239, 68, 68, 0); }
+  }
+
+  .record-pulse {
+    animation: recordPulse 1.2s ease-in-out infinite;
+  }
+}

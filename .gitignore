@@ -1,0 +1,12 @@
+# Local credentials — configure these in Vercel Environment Variables instead.
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Generated dependencies and build output
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+frontend/dist/
+.vercel/
